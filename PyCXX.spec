@@ -5,12 +5,13 @@ Summary:	Set of classes to help create extensions of Python in the C++ language
 Summary(pl.UTF-8):	Klasy C++ pomocne przy tworzeniu modułów Pythona
 Name:		PyCXX
 Version:	6.2.3
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Libraries
 # http://prdownloads.sourceforge.net/cxx/pycxx-6.2.3.tar.gz
 Source0:	http://downloads.sourceforge.net/cxx/pycxx-%{version}.tar.gz
 # Source0-md5:	4e545ad225df9c14a3b344b1e6224661
+Patch0:         %{name}-memleak_fix.patch
 URL:		http://cxx.sourceforge.net/
 BuildRequires:	python-modules
 Requires:	libstdc++-devel
@@ -30,6 +31,7 @@ modułów rozszerzeń Pythona.
 
 %prep
 %setup -q -n pycxx-%{version}
+%patch0 -p1
 
 %build
 
