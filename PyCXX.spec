@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_includedir}/python3.10/CXX
-%{_datadir}/python3.10/CXX
+%{py3_incdir}/CXX
+%{py3_prefix}/share/python%{py3_ver}/CXX
 %{py3_sitescriptdir}/CXX-%{version}-py*.egg-info
 %{py3_sitescriptdir}/CXX
