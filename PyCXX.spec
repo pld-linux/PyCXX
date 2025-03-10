@@ -2,7 +2,7 @@ Summary:	Set of classes to help create extensions of Python in the C++ language
 Summary(pl.UTF-8):	Klasy C++ pomocne przy tworzeniu modułów Pythona
 Name:		PyCXX
 Version:	7.1.7
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Libraries
 # http://prdownloads.sourceforge.net/cxx/pycxx-6.2.3.tar.gz
