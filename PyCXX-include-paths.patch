@@ -1,0 +1,26 @@
+# sources are installed flat under share/pythonX.Y/CXX, no Src/ dir; cxx_extensions.cxx already includes "PythonN/..."
+# same fix as Fedora python-pycxx: pycxx-7-change-include-paths.patch
+--- pycxx-7.1.7.orig/Src/cxxextensions.c	2026-09-26 23:02:27.192734366 +0200
++++ pycxx-7.1.7/Src/cxxextensions.c	2026-09-26 23:02:27.219975305 +0200
+@@ -37,7 +37,7 @@
+ #include "CXX/WrapPython.h"
+ 
+ #if PY_MAJOR_VERSION == 2
+-#include "Src/Python2/cxxextensions.c"
++#include "Python2/cxxextensions.c"
+ #else
+-#include "Src/Python3/cxxextensions.c"
++#include "Python3/cxxextensions.c"
+ #endif
+--- pycxx-7.1.7.orig/Src/cxxsupport.cxx	2026-09-26 23:02:27.192734366 +0200
++++ pycxx-7.1.7/Src/cxxsupport.cxx	2026-09-26 23:02:27.220164601 +0200
+@@ -37,7 +37,7 @@
+ #include "CXX/WrapPython.h"
+ 
+ #if PY_MAJOR_VERSION == 2
+-#include "Src/Python2/cxxsupport.cxx"
++#include "Python2/cxxsupport.cxx"
+ #else
+-#include "Src/Python3/cxxsupport.cxx"
++#include "Python3/cxxsupport.cxx"
+ #endif
